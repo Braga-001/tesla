@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tesla Design Studio</title>
+
+    <link rel="stylesheet" href="tesla.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h2>TESLA <span>STUDIO</span></h2>
+    <button id="resetBtn">RESET DESIGN</button>
+</header>
+
+<main>
+
+    <section class="viewer">
+
+        <div class="viewer-title">
+            <p>YOUR VISION. YOUR TESLA.</p>
+            <h1>Design Without Limits.</h1>
+        </div>
+
+        <div id="car-container"></div>
+
+        <div class="viewer-footer">
+            <span>360° INTERACTIVE VIEW</span>
+            <span>DRAG TO ROTATE</span>
+        </div>
+
+    </section>
+
+
+    <aside class="editor">
+
+        <h2>Customize Your Ride</h2>
+
+        <p class="subtitle">
+            Create a design that represents you.
+        </p>
+
+        <div class="control-section">
+
+            <h3>EXTERIOR COLOUR</h3>
+
+            <div class="colors">
+
+                <button class="color" data-color="#ffffff"
+                    style="background:#ffffff"></button>
+
+                <button class="color" data-color="#171717"
+                    style="background:#171717"></button>
+
+                <button class="color" data-color="#b90000"
+                    style="background:#b90000"></button>
+
+                <button class="color" data-color="#243b63"
+                    style="background:#243b63"></button>
+
+                <button class="color" data-color="#777777"
+                    style="background:#777777"></button>
+
+                <button class="color" data-color="#d5b78d"
+                    style="background:#d5b78d"></button>
+
+            </div>
+
+        </div>
+
+
+        <div class="control-section">
+
+            <h3>WHEEL STYLE</h3>
+
+            <select id="wheelStyle">
+                <option value="sport">Sport Wheels</option>
+                <option value="luxury">Luxury Wheels</option>
+                <option value="standard">Standard Wheels</option>
+            </select>
+
+        </div>
+
+
+        <div class="control-section">
+
+            <h3>DESIGN DESCRIPTION</h3>
+
+            <textarea
+                id="designPrompt"
+                placeholder="Example: Matte black Tesla with red accents and luxury wheels...">
+            </textarea>
+
+            <button id="generateBtn">
+                GENERATE DESIGN →
+            </button>
+
+            <p id="status"></p>
+
+        </div>
+
+
+        <div class="control-section">
+
+            <h3>QUICK STYLES</h3>
+
+            <div class="presets">
+
+                <button data-preset="black">Midnight Black</button>
+
+                <button data-preset="red">Performance Red</button>
+
+                <button data-preset="white">Pure White</button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</main>
+
+<script type="module" src="tesla.js"></script>
+
+</body>
+</html>
